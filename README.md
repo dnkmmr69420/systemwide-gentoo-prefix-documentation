@@ -24,3 +24,12 @@ sudo passwd gentoo
 4. now log out and log into the user gentoo with the password that you have set up on step 3
 
 5. now follow the steps on this [page](https://wiki.gentoo.org/wiki/Project:Prefix/Bootstrap)
+
+Note: if gentoo fails to install, create an arch linux container by typing the following. doing this will require [distrobox](https://github.com/89luca89/distrobox) to be installed
+
+ install base-devel by typing this
+ 
+ ```bash
+ sudo pacman -S base-devel
+ ```
+ go to step 5

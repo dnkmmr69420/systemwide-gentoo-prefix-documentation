@@ -27,9 +27,16 @@ sudo passwd gentoo
 
 Note: if gentoo fails to install, create an arch linux container by typing the following. doing this will require [distrobox](https://github.com/89luca89/distrobox) to be installed
 
+## create an arch linux container
+
+```bash
+distrobox create -i archlinux:latest -n arch -p
+```
+
  install base-devel by typing this
  
  ```bash
  sudo pacman -S base-devel
  ```
+ 
  go to step 5

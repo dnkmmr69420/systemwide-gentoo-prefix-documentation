@@ -46,11 +46,37 @@ distrobox create -i archlinux:latest -n arch -p
  sudo chmod -R a+rx /var/lib/gentoo
  ```
  
- 6. hide gentoo user from login screen
+
+ 
+ ## Usage
+ 
+ Avoid running emerge as root. To enter as the gentoo user, run this
+ 
+ ```bash
+ su gentoo
+ ```
+ 
+ it should ask for your password. After it asks for your password, you should be running as that user in the terminal.
+ 
+ ## Some optional extra steps
+ 
+ 6. hide gentoo user from login screen. ake sure the user isn't running.
  
  ```bash
  sudo usermod -u 980 gentoo
  ```
+ 
+ 7. symlink emerge to ~/.local/bin for easier acess (while in the gentoo user)
+
+```bash
+ln -s ~/gentoo/usr/bin/emerge ~/.local/bin
+```
+
+if the bin folder doesn't exist type
+
+```bash
+mkdir ~/.local/bin
+```
  
  ## uninstallation
  

@@ -1,5 +1,7 @@
 # systemwide gentoo prefix installation documentation
 
+Warning: this may not be 100% secure but you need root privleges to install packages into that directory
+
 Here is some documentation to install gentoo prefix for all users
 
 1. create a new user by typing this 

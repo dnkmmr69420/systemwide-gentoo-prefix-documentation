@@ -63,7 +63,7 @@ distrobox create -i archlinux:latest -n arch -p
  6. hide gentoo user from login screen. ake sure the user isn't running.
  
  ```bash
- sudo usermod -u 980 gentoo
+ sudo usermod -u 900 gentoo
  ```
  
  7. symlink emerge to ~/.local/bin for easier acess (while in the gentoo user)

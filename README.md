@@ -7,13 +7,13 @@ Here is some documentation to install gentoo prefix for all users
 1. create a new user by typing this 
 
 ```bash
-sudo useradd -m -d /var/gentoo gentoo
+sudo useradd -m -d /var/lib/gentoo gentoo
 ```
 
 2. Make the user folder readable and executable for all users
 
 ```bash
-sudo chmod -R a+rx /var/gentoo
+sudo chmod -R a+rx /var/lib/gentoo
 ```
 
 3. set a password for the user gentoo. if user is not detected open up a new tab on the terminal
@@ -48,7 +48,7 @@ distrobox create -i archlinux:latest -n arch -p
  Delete the gentoo directory
  
  ```bash
- sudo rm -r /var/gentoo
+ sudo rm -r /var/lib/gentoo
  ```
  
  delete the gentoo user

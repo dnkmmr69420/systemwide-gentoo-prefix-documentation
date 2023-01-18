@@ -1,6 +1,6 @@
 # systemwide gentoo prefix installation documentation
 
-Warning: this may not be 100% secure but you need root privleges to install packages into that directory
+Warning: this may not be 100% secure but you need root privleges to install packages into that directory. Suggest me ways to make this more secure if you can.
 
 Here is some documentation to install gentoo prefix for all users
 
@@ -42,3 +42,17 @@ distrobox create -i archlinux:latest -n arch -p
  ```
  
  go to step 5
+ 
+ ## uninstallation
+ 
+ Delete the gentoo directory
+ 
+ ```bash
+ sudo rm -r /var/gentoo
+ ```
+ 
+ delete the gentoo user
+ 
+ ```bash
+ sudo userdel gentoo
+ ```

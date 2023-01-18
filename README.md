@@ -36,7 +36,21 @@ distrobox create -i archlinux:latest -n arch -p
  sudo pacman -S base-devel
  ```
  
- go to step 5
+ go to step 4
+ 
+ ## post installation
+ 
+ 5. make /var/lib/gentoo readable and executable by all users. Note: /var/lib/gentoo still stays read only for all users except root (able to do anything regardless of permissions) and the gentoo user
+ 
+ ```bash
+ sudo chmod -R a+rx /var/lib/gentoo
+ ```
+ 
+ 6. hide gentoo user from login screen
+ 
+ ```bash
+ sudo usermod -u 980 gentoo
+ ```
  
  ## uninstallation
  

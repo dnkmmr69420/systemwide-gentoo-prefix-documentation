@@ -40,17 +40,18 @@ distrobox create -i archlinux:latest -n arch -p
  
  ## post installation
  
- 5. make /var/lib/gentoo readable and executable by all users. Note: /var/lib/gentoo still stays read only for all users except root (able to do anything regardless of permissions) and the gentoo user
+ 5. make /var/lib/gentoo readable and executable by all users. Note: /var/lib/gentoo still stays read only for all users except root (root is able to do anything regardless of permissions) and the gentoo user
  
  ```bash
  sudo chmod -R a+rx /var/lib/gentoo
  ```
- 
 
  
  ## Usage
  
- Avoid running emerge as root. To enter as the gentoo user, run this
+ ### running the user in the terminal
+ 
+ Enter as the gentoo user using this command to install packages or modify other things in the system wide gentoo prefix. Avoid running emerge as root. Emerge ran as root can do anything it wants to the host root file system unlike running it as the gentoo user. To enter as the gentoo user, run this
  
  ```bash
  su gentoo
@@ -58,13 +59,24 @@ distrobox create -i archlinux:latest -n arch -p
  
  it should ask for your password. After it asks for your password, you should be running as that user in the terminal.
  
+ Want to link a command that was installed on the system wide gentoo for all users, type the following. htop will be used as an example. run as a user with regualr privleges.
+
+ ```bash
+ sudo ln -s /var/lib/gentoo/gentoo/usr/bin/htop /usr/local/bin
+ ```
+ 
+ After this, htop should be available for all users.
+ 
+ 
  ## Some optional extra steps
  
- 6. hide gentoo user from login screen. ake sure the user isn't running.
+ 6. hide gentoo user from login screen. Make sure the user isn't running.
  
  ```bash
  sudo usermod -u 900 gentoo
  ```
+ 
+ Note: the UID does not have to be 900. You can use any UID that is less than 1000 (1-999) and any UID that is not taken.
  
  7. symlink emerge to ~/.local/bin for easier acess (while in the gentoo user)
 

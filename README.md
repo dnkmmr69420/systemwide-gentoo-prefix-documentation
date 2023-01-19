@@ -10,6 +10,8 @@ Here is some documentation to install gentoo prefix for all users
 sudo useradd -m -d /var/lib/gentoo gentoo
 ```
 
+Only use the gentoo user for installing portage packages system wide. Never put personal files on the gentoo home directory.
+
 
 2. set a password for the user gentoo. if user is not detected open up a new tab on the terminal
 

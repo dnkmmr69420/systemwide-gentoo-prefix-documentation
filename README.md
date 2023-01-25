@@ -1,4 +1,4 @@
-# systemwide gentoo prefix installation documentation
+# system wide gentoo prefix installation documentation
 
 Warning: this may not be 100% secure but you need to be running as the gentoo user to install packages into that directory. Suggest me ways to make this more secure if you can.
 
